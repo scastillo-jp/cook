@@ -13,7 +13,7 @@ stages:
   - build
   - release
 
- test:
+test:
   stage: test
   image: tiangolo/docker-with-compose
   script:
@@ -62,3 +62,4 @@ pages:
     expire_in: 30 days
   only:
     - master
+
