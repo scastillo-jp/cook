@@ -9,11 +9,17 @@ variables:
   CONTAINER_RELEASE_IMAGE: $CI_REGISTRY_IMAGE:latest
 
 stages:
+  - lint
   - test
   - build
   - release
 
-test:
+lint:
+  script:
+    - pip install flake8  
+    - flake8
+
+ test:
   stage: test
   image: tiangolo/docker-with-compose
   script:
