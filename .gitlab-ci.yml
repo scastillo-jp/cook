@@ -14,7 +14,8 @@ stages:
   - build
   - release
 
-lint:
+ lint:
+  stage: lint
   script:
     - python3 -m pip install flake8
     - flake8
